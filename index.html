@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <script>
+        fetch('urls.json')
+            .then(res => res.json())
+            .then(data => {
+                const code = location.pathname.replace('/', '');
+                window.location.replace(data[code]);
+            });
+    </script>
+</body>
+</html>
