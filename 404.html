@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <script>
+        fetch('urls.json')
+            .then(res => res.json())
+            .then(data => {
+                const segments = location.pathname.split('/').filter(Boolean);
+                const code = segments.pop(); 
+                if (data[code]) {
+                    window.location.replace(data[code]);
+                }
+            });
+    </script>
+</body>
+</html>
