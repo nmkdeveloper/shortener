@@ -2,15 +2,11 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="0;url=https://github.com/nmkdeveloper/shortener">
 </head>
 <body>
     <script>
-        fetch('urls.json')
-            .then(res => res.json())
-            .then(data => {
-                const code = location.pathname.replace('/', '');
-                window.location.replace(data[code]);
-            });
+        window.location.replace("https://github.com/nmkdeveloper/shortener");
     </script>
 </body>
 </html>
